@@ -10,4 +10,5 @@ urlpatterns = [
     path('purchase',include('home.urls')),
     path('register',include('home.urls')), 
     path('dashboard',include('home.urls')),
+    path('search_result',include('home.urls')),
 ]
