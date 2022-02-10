@@ -9,4 +9,5 @@ urlpatterns = [
     path('login',include('home.urls')),
     path('purchase',include('home.urls')),
     path('register',include('home.urls')), 
+    path('dashboard',include('home.urls')),
 ]
