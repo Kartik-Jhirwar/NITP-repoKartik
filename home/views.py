@@ -1,5 +1,7 @@
 import http
-from django.shortcuts import render , HttpResponse
+from django.shortcuts import render 
+from .models import Data
+from django.db.models import Q
 
 # Create your views here.
 def index(request):
@@ -16,3 +18,14 @@ def register(request):
 
 def dashboard(request):
     return render(request , 'dashboard.html')
+
+def search_result(request):
+
+    if request.method == 'GET':
+        query = request.GET.get('query')
+        if query:
+            data = Data.objects.filter(college_name__icontains=query) 
+            return render(request, 'search_result.html', {'data':data})
+        else:
+            print("No information to show")
+            return render(request, 'search_result.html', {})
