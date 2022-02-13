@@ -10,3 +10,12 @@ class Data(models.Model):
 
     def __str__(self):
         return self.college_name
+
+class StudentData(models.Model):
+    First_Name = models.CharField(max_length=500)
+    Last_Name = models.CharField(max_length = 500 , null=True)
+    Email = models.CharField(max_length = 5000 , null=True)
+    Class_10_marks = models.IntegerField(null=True)
+    Class_12_marks = models.IntegerField(null=True)
+
+    

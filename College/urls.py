@@ -13,4 +13,6 @@ urlpatterns = [
     path('search_result',include('home.urls')),
     path('kiet_page',include('home.urls')),
     path('done',include('home.urls')),
+    path('profile_settings',include('home.urls')),
+    path('save',include('home.urls')),
 ]

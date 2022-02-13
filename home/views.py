@@ -1,6 +1,8 @@
+import email
 import http
 from django.shortcuts import render 
 from .models import Data
+from .models import StudentData
 from django.db.models import Q
 
 # Create your views here.
@@ -35,3 +37,20 @@ def kiet_page(request):
 
 def done(request):
     return render(request , 'done.html')
+
+def profile_settings(request):
+    return render(request , 'profile_settings.html')
+
+def save(request):
+
+    if request.method == "POST":
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        email = request.POST.get('email')
+        marks10 = request.POST.get('marks10')
+        marks12 = request.POST.get('marks12')
+
+        en = StudentData(First_Name = firstname ,Last_Name = lastname , Email = email , Class_10_marks = marks10 , Class_12_marks = marks12 )
+        en.save()
+
+    return render(request , 'details_saved.html')

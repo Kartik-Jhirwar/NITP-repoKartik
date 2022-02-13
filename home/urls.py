@@ -11,4 +11,6 @@ urlpatterns = [
     path("search/", views.search_result , name ="search"),
     path("kiet_page", views.kiet_page , name ="kiet_page"),
     path("done", views.done , name ="done"),
+    path("profile_settings", views.profile_settings , name ="profile_settings"),
+    path("save", views.save , name ="save"),
 ]
