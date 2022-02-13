@@ -9,4 +9,6 @@ urlpatterns = [
     path("register", views.register , name ="register"),
     path("dashboard", views.dashboard , name ="dashboard"),
     path("search/", views.search_result , name ="search"),
+    path("kiet_page", views.kiet_page , name ="kiet_page"),
+    path("done", views.done , name ="done"),
 ]

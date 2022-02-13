@@ -11,4 +11,6 @@ urlpatterns = [
     path('register',include('home.urls')), 
     path('dashboard',include('home.urls')),
     path('search_result',include('home.urls')),
+    path('kiet_page',include('home.urls')),
+    path('done',include('home.urls')),
 ]

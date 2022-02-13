@@ -29,3 +29,9 @@ def search_result(request):
         else:
             print("No information to show")
             return render(request, 'search_result.html', {})
+
+def kiet_page(request):
+    return render(request , 'kiet.html')
+
+def done(request):
+    return render(request , 'done.html')
